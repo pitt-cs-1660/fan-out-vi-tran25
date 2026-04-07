@@ -41,7 +41,7 @@ jobs:
         run: |
           cd lambda/metadata_extractor
           
-          docker build -t $ECR_REGISTRY/ECR_REPOSITORY:$IMAGE_TAG
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push 874505351656.dkr.ecr.us-east-1.amazonaws.com/metadata-extractor
 
           exit 1
@@ -112,7 +112,7 @@ jobs:
         run: |
           cd lambda/image_validator
           
-          docker build -t $ECR_REGISTRY/ECR_REPOSITORY:$IMAGE_TAG
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push 874505351656.dkr.ecr.us-east-1.amazonaws.com/image-validator
 
           exit 1
