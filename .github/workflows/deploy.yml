@@ -44,8 +44,6 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-          exit 1
-
       - name: Check if Lambda function exists
         id: check-lambda-metadata-extractor
         run: |
@@ -114,8 +112,6 @@ jobs:
           
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
-          exit 1
 
       - name: Check if Lambda function exists
         id: check-lambda-image-validator
